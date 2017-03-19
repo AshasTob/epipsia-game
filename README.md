@@ -1,2 +1,8 @@
 # epipsia-game
-Preliminary version of an html riddle-based quest
+### - TO ANYONE WHO WANTS TO PLAY QUEST: DO NOT READ THE PROJECT CODE/STRUCTURE. IT MAY RUIN YOUR EXPERIENCE - ###
+Preliminary version of an html riddle-based quest.
+Created in 2013 by me, as a bored student, dreaming about video-games development.
+
+This game is fully inspired by http://www.ouverture-facile.com/start/ .
+Epipsia game inherits logic and quest-design from ouverture-facile, at the same time being product of my creativity.
+
