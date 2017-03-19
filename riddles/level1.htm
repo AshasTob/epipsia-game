@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>First Steps</title>
+	<link rel="shortcut icon" href="../riddles/logosmall.png">
+	<style>
+		#canvas{
+			width:800px;
+			height:400px;
+			left:20%;
+			top:50px;
+			z-index:3;
+			position:absolute;
+			background-color:white;
+		}
+		#clue{
+			left:20%;
+			top:450px;
+			z-index:3;
+			position:absolute;
+		}
+		
+	</style>
+
+</head>
+<body background="fonpicture.jpg">
+	<canvas id="canvas">
+	</canvas>
+	<a id="clue" href="../clues/clevel1.htm"><img src="../riddles/clue.png"/>
+	</a>
+</body>
+<script>
+	var canvas = document.getElementById("canvas");
+	var ct=canvas.getContext("2d");
+	canvas.width="800";
+	canvas.height="400";
+	ct.font = "bold 44px Arial";
+	ct.fillText("Just go to the next level ;)", 100, 200);
+	ct.font = "bold 44px Comic Sans";
+	ct.fillText("Level 1",600,380);
+</script>
+</html>

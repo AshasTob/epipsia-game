@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Trust me!</title>
+	<script src="../kinnetic.js"></script>
+	<link rel="shortcut icon" href="../riddles/logosmall.png">
+	<style>
+		#canvas{
+			width:800px;
+			height:400px;
+			left:20%;
+			top:50px;
+			z-index:3;
+			position:absolute;
+			background-color:white;
+		}
+		#clue{
+			left:20%;
+			top:450px;
+			z-index:3;
+			position:absolute;
+		}
+		#divId{
+			left:40%;
+			top:460px;
+			z-index:3;
+			position:absolute;
+		}
+		
+	</style>
+
+</head>
+<body background="fonpicture.jpg">
+	<div id="canvas">
+	</div>
+	<a id="clue" href="../clues/cgambit.htm"><img src="../riddles/clue.png"/>
+	</a>
+	<div style="font-size:44px;font-weight:bold;color:#FF00FF">
+		level 4
+	</div>
+	<div id="divId">
+	<input type="button" value="OK" id="but"/>
+    <input type="text" value="" id="inp"/>
+	</div>
+	
+</body>
+<script>
+	    var stage = new Kinetic.Stage({
+          container: 'canvas',
+          width: 800,
+          height: 400
+        });
+		var text = new Kinetic.Text({
+			x:25,
+			y:50,
+			fontSize:35,
+			text:'Server could not upload logo.png, \n it does not exist, trying to load smaller version'
+		});
+        var layer = new Kinetic.Layer();
+		setInterval(function(){
+			if(text.getFill()=="#FFFFFF"){
+				text.setFill("#000000");
+			}
+			else{
+				text.setFill("#FFFFFF");
+			}
+			layer.draw();
+			},700);
+		layer.add(text);
+		stage.add(layer);
+		document.getElementById("but").onclick=function(){
+			window.location.href="../readless/"+document.getElementById("inp").value+".htm";
+		}
+</script>
+</html>

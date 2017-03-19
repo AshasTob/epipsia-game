@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+<!-- map.jpg!-->
+    <meta charset="utf-8" />
+    <title>Literature</title>
+	<script src="../kinnetic.js"></script>
+	<link rel="shortcut icon" href="../riddles/logosmall.png">
+	<style>
+		#canvas{
+			width:800px;
+			height:400px;
+			left:20%;
+			top:50px;
+			z-index:3;
+			position:absolute;
+			background-color:white;
+		}
+		#clue{
+			left:20%;
+			top:450px;
+			z-index:3;
+			position:absolute;
+		}
+		#divId{
+			left:40%;
+			top:460px;
+			z-index:3;
+			position:absolute;
+		}
+		
+	</style>
+
+</head>
+<body background="fonpicture.jpg">
+	<div id="canvas">
+	</div>
+	<a id="clue" href="../clues/cbooks.htm"><img src="../riddles/clue.png"/>
+	</a>
+	<div style="font-size:44px;font-weight:bold;color:#0F30FF">
+		level 6
+	</div>
+	
+</body>
+<script>
+	    var stage = new Kinetic.Stage({
+          container: 'canvas',
+          width: 800,
+          height: 400
+        });
+		var layer = new Kinetic.Layer();
+		var t = new Kinetic.Text({
+			x:50,
+			y:200,
+			fontSize:25,
+			text:'Come back when you can find hidden in source of the head',
+			fill:"#000000"
+		});
+		layer.add(t);
+		stage.add(layer);
+		
+
+</script>
+</html>

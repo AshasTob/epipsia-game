@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Literature</title>
+	<script src="../kinnetic.js"></script>
+	<link rel="shortcut icon" href="../riddles/logosmall.png">
+	<style>
+		#canvas{
+			width:800px;
+			height:400px;
+			left:20%;
+			top:50px;
+			z-index:3;
+			position:absolute;
+			background-color:white;
+		}
+		#clue{
+			left:20%;
+			top:450px;
+			z-index:3;
+			position:absolute;
+		}
+		#divId{
+			left:40%;
+			top:460px;
+			z-index:3;
+			position:absolute;
+		}
+		
+	</style>
+
+</head>
+<body background="fonpicture.jpg">
+	<div id="canvas">
+	</div>
+	<a id="clue" href="../clues/clie.htm"><img src="../riddles/clue.png"/>
+	</a>
+	<div style="font-size:44px;font-weight:bold;color:#00FFFF">
+		level 5
+	</div>
+	
+</body>
+<script>
+	    var stage = new Kinetic.Stage({
+          container: 'canvas',
+          width: 800,
+          height: 400
+        });
+		var layer = new Kinetic.Layer();
+		var img1 = new Image();
+		img1.src="../readless/book.png";
+		img1.onload=function(){
+		var t = new Kinetic.Text({
+			x:250,
+			y:10,
+			fontSize:35,
+			text:'Read More',
+			fill:"#000000"
+		});
+		var ext = new Kinetic.Text({
+			x:250,
+			y:300,
+			fontSize:35,
+			text:'s.htm',
+			fill:"#000000"
+		});
+		var image = new Kinetic.Image({
+			x:255,
+			y:120,
+			image:img1,
+			width: 200,
+			height: 150
+		});
+		layer.add(t);
+		layer.add(ext);
+		layer.add(image);
+		stage.add(layer);
+		}
+		
+
+</script>
+</html>

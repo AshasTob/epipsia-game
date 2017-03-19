@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Permutations</title>
+	<script src="../kinnetic.js"></script>
+	<link rel="shortcut icon" href="../riddles/logosmall.png">
+	<style>
+		#canvas{
+			width:800px;
+			height:400px;
+			left:20%;
+			top:50px;
+			z-index:3;
+			position:absolute;
+			background-color:white;
+		}
+		#clue{
+			left:20%;
+			top:450px;
+			z-index:3;
+			position:absolute;
+		}
+		
+	</style>
+
+</head>
+<body background="fonpicture.jpg">
+	<div id="canvas">
+	</div>
+	<a id="clue" href="../clues/clevel2.htm"><img src="../riddles/clue.png"/>
+	</a>
+	<div style="font-size:44px;font-weight:bold;color:#FF0000">
+		level 2
+	</div>
+</body>
+<script>
+	    var stage = new Kinetic.Stage({
+          container: 'canvas',
+          width: 800,
+          height: 400
+        });
+        var layer = new Kinetic.Layer();
+
+	    var a = new Kinetic.Text({
+            x: stage.getWidth() / 2,
+			y: 15,
+			text: 'A',
+			fontSize: 30,
+			fontFamily: 'Calibri',
+			fill: 'green',
+			draggable:true
+        });
+			    var a = new Kinetic.Text({
+            x: stage.getWidth() / 2+25,
+			y: 40,
+			text: 'A',
+			fontSize: 30,
+			fontFamily: 'Calibri',
+			fill: 'green',
+			draggable:true
+        });
+		var m = new Kinetic.Text({
+            x: stage.getWidth() / 2+5,
+			y: 15,
+			text: 'M',
+			fontSize: 30,
+			fontFamily: 'Calibri',
+			fill: 'green',
+			draggable:true
+        });
+		var t = new Kinetic.Text({
+            x: stage.getWidth() / 2,
+			y: 15,
+			text: 'T',
+			fontSize: 30,
+			fontFamily: 'Calibri',
+			fill: 'green',
+			draggable:true
+        });
+		var h = new Kinetic.Text({
+            x: stage.getWidth() / 2+40,
+			y: 15,
+			text: 'H',
+			fontSize: 30,
+			fontFamily: 'Calibri',
+			fill: 'green',
+			draggable:true
+        });
+		var n = new Kinetic.Text({
+            x: stage.getWidth() / 2+40,
+			y: 80,
+			text: 'n',
+			fontSize: 30,
+			fontFamily: 'Calibri',
+			fill: 'green',
+			draggable:true
+        });
+				var kr = new Kinetic.Text({
+            x: stage.getWidth() / 2-40,
+			y: 75,
+			text: '.',
+			fontSize: 30,
+			fontFamily: 'Calibri',
+			fill: 'green',
+			draggable:true
+        });
+				var p = new Kinetic.Text({
+            x: stage.getWidth() / 2-25,
+			y: 45,
+			text: 'p',
+			fontSize: 30,
+			fontFamily: 'Calibri',
+			fill: 'green',
+			draggable:true
+        });
+				var g = new Kinetic.Text({
+            x: stage.getWidth() / 2+65,
+			y: 80,
+			text: 'g',
+			fontSize: 30,
+			fontFamily: 'Calibri',
+			fill: 'green',
+			draggable:true
+        });
+		layer.add(m);
+		layer.add(a);
+		layer.add(t);
+		layer.add(h);
+		layer.add(kr);
+		layer.add(p);
+		layer.add(n);
+		layer.add(g);
+		for(var i = 0;i < layer.children.length;i++){
+			layer.children[i].on('mouseover', function() {
+			document.body.style.cursor = "pointer"
+      });
+            layer.children[i].on('mouseout', function() {
+			document.body.style.cursor = "default"
+      });
+		}
+	stage.add(layer);
+</script>
+</html>

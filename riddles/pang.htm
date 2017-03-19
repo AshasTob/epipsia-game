@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Step by Step</title>
+	<script src="../kinnetic.js"></script>
+	<link rel="shortcut icon" href="../riddles/logosmall.png">
+	<style>
+		#canvas{
+			width:800px;
+			height:400px;
+			left:20%;
+			top:50px;
+			z-index:3;
+			position:absolute;
+			background-color:white;
+		}
+		#clue{
+			left:20%;
+			top:450px;
+			z-index:3;
+			position:absolute;
+		}
+		
+	</style>
+
+</head>
+<body background="fonpicture.jpg">
+	<div id="canvas">
+	</div>
+	<a id="clue" href="../clues/cpang.htm"><img src="../riddles/clue.png"/>
+	</a>
+	<div style="font-size:44px;font-weight:bold;color:#0000FF">
+		level 3
+	</div>
+</body>
+<script>
+	    var stage = new Kinetic.Stage({
+          container: 'canvas',
+          width: 800,
+          height: 400
+        });
+        var layer = new Kinetic.Layer();
+		var imagePistol1 = new Image();
+		var imagePistol2 = new Image();	
+		var pistol1;
+		var pistol2;
+		var pistol3;
+		var sound1 = new Audio('../riddles/step1.mp3');
+		var sound2 = new Audio('../riddles/step2.mp3');
+		var sound3 = new Audio('../riddles/step3.mp3');
+		imagePistol1.onload = function() {
+		setTimeout(function(){
+			pistol1 = new Kinetic.Image({
+			  x:5,
+			  y: 5,
+			  image: imagePistol1,
+			  width: 200,
+			  height: 150
+			});
+			pistol3 = new Kinetic.Image({
+			  x: 5,
+			  y: 250,
+			  image: imagePistol1,
+			  width: 200,
+			  height: 150
+			});
+			pistol2 = new Kinetic.Image({
+				  x: 500,
+				  y: 150,
+				  image: imagePistol2,
+				  width: 200,
+				  height: 150
+			});
+			pistol1.on('mouseover', function() {
+				document.body.style.cursor = "pointer";
+				sound1.play();
+			});
+		    pistol1.on('mouseout', function() {
+				document.body.style.cursor = "default"
+			});
+			pistol3.on('mouseover', function() {
+				document.body.style.cursor = "pointer"
+				sound3.play();
+			});
+			pistol3.on('mouseout', function() {
+				document.body.style.cursor = "default"
+			});
+			pistol2.on('mouseover', function() {
+			document.body.style.cursor = "pointer"
+			sound2.play();
+			});
+			pistol2.on('mouseout', function() {
+			document.body.style.cursor = "default"
+			});
+			layer.add(pistol1);
+			layer.add(pistol2);
+			layer.add(pistol3);	
+			stage.add(layer);
+			},350);
+		}
+		imagePistol1.src="../riddles/white.jpg";
+		imagePistol2.src="../riddles/black.jpg";
+</script>
+</html>
